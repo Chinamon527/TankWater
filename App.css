@@ -1,0 +1,98 @@
+.main{
+  background-color: rgb(107, 21, 186);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  align-items: center; 
+  display: flex;
+  flex-direction: column; /*จัดแถว*/
+  color: #ffffff;
+  overflow-y: auto;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.frame{
+  border: 2px solid red;
+}
+
+
+.Row{
+  gap: 20px;
+  width: 80%;
+  display: grid;
+  height: 60%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+.fontsize{
+  font-size: 800%;
+  font-weight: bolder;
+}
+
+.colorfont{
+  color: #6b15ba;
+}
+
+.box-n{
+  align-items: center; /* จัดเนื้อหาให้อยู่ตรงกลางในแนวตั้ง */
+  background-color: rgb(0, 0, 0);
+  padding: 10px 24PX;
+  border-radius: 25PX;
+  display: flex;
+  flex-direction: column;
+  transform-origin: center top;
+  transition: transform 0.3s;
+  flex-grow: 1; /* ให้กล่องขยับเมื่อ hover */
+  flex-shrink: 1;
+  height: 300px;
+}
+.box-n:hover{
+  transform: scale(1.05);
+}
+
+.button {
+  display: inline-block;
+  background-color: #6b15ba; /* สีพื้นหลัง */
+  color: white; /* สีข้อความ */
+  padding: 25px 50px; /* การระบุขนาดขอบเขต */
+  border: none; /* ลบขอบ */
+  border-radius: 5px; /* มุมขอบโค้ง */
+  text-align: center; /* จัดวางข้อความกลาง */
+  text-decoration: none; /* ลบการขีดเส้นใต้ข้อความ */
+  font-size: 20px; /* ขนาดตัวอักษร */
+  font-weight: bolder;
+  cursor: pointer; /* ส่งสัญญาณว่าเป็นปุ่มที่คลิกได้ */
+  margin-top: 10%;
+}
+
+.button:hover {
+  background-color: #3f0c6f; /* เปลี่ยนสีพื้นหลังเมื่อเมาส์ไปชี้ */
+}
+
+@media (max-width: 1200px) {
+  .fontsize {
+    font-size: 500%; /* เปลี่ยน font size เมื่อขนาดหน้าจอน้อยกว่า 768px */
+  }
+}
+
+@media (max-width: 1080px) {
+  .Row {
+    display: flex;
+    flex-direction: column;/* เพิ่มสไตล์เพิ่มเติมหรือปรับแต่งตามความต้องการของคุณ */
+  }
+  .fontsize {
+    font-size: 450%; /* เปลี่ยน font size เมื่อขนาดหน้าจอน้อยกว่า 768px */
+  }
+}
+
+@media (max-width: 768px) {
+  .Row {
+    display: flex;
+    flex-direction: column;/* เพิ่มสไตล์เพิ่มเติมหรือปรับแต่งตามความต้องการของคุณ */
+  }
+  .fontsize {
+    font-size: 400%; /* เปลี่ยน font size เมื่อขนาดหน้าจอน้อยกว่า 768px */
+  }
+}
